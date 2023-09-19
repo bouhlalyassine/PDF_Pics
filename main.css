@@ -33,12 +33,6 @@ hr {/* Remove the extra space after the devider*/
 }
 
 
-/* SideBar */
-.css-hdtcna {
-  min-width: 250px;
-  max-width: 250px;
-}
-
 
 /* Buttons */
 .stButton {
@@ -55,12 +49,6 @@ hr {/* Remove the extra space after the devider*/
 /*remove extra space*/
 .body {
   line-height: 0;
-}
-
-
-/* Main KPI */
-.css-zt5igj  {
-  text-align: center;
 }
 
 
