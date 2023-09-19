@@ -38,7 +38,7 @@ with st.sidebar :
     uploaded_file = st.file_uploader("📌 Upload PDF", type=["pdf"], key="fup1", label_visibility="visible")
 
 
-if uploaded_file :          
+if uploaded_file :
     images = extract_img(uploaded_file)
     namefile = uploaded_file.name
     img_idx = 0
