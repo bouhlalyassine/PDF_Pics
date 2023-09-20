@@ -11,8 +11,7 @@ st.set_page_config(page_title=TITLE,
     page_icon=PAGE_ICON,
     layout="wide")
 
-# --- LOAD CSS, PDF & PROFIL PIC ---
-with open(css_file) as f: # Load the CSS file
+with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 
@@ -29,7 +28,7 @@ with st.sidebar :
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    clickable_img = get_img_with_href(linkpic_code, 'https://github.com/bouhlalyassine/PDF_Pics',
+    clickable_img = get_img_with_href(linkpic_code, 'https://github.com/bouhlalyassine/Pics_PDF',
         170, "blank")
     st.markdown(clickable_img, unsafe_allow_html=True)
 
@@ -92,10 +91,8 @@ if uploaded_file :
                 file_name=f"image_{img_idx}.png",
                 mime="image")
         
-        # img = disp_chart_img(img_displ)
-        # img_chart= st.plotly_chart(img, use_container_width=True)
         img_width = resize_image(img_displ)
-        img_chart = st.image(image = img_displ, width = img_width) # use_column_width=True
+        img_chart = st.image(image = img_displ, width = img_width)
 
 else:
     st.markdown("<br>", unsafe_allow_html=True)
@@ -113,7 +110,7 @@ else:
         speed=1,
         reverse=False,
         loop=True,
-        quality="high", # medium ; high ; low
+        quality="high",
         height=150)
 
     esp_1, col_vid_tuto, esp_2 = st.columns([space, tuto_space, space], gap="small")
