@@ -8,11 +8,7 @@ from io import BytesIO
 # streamlit run Extract_PDF_Images.py
 
 st.set_page_config(page_title=TITLE,
-    page_icon=PAGE_ICON,
     layout="wide")
-
-with open(css_file) as f:
-    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 
 st.markdown("<h2 style=\
@@ -23,17 +19,6 @@ st.markdown("<h2 style=\
 st.markdown("---")
 
 with st.sidebar :
-    clickable_img_logo = get_img_with_href(pp_logo_portfolio, 'https://ybouhlal.streamlit.app/', 70, "blank")
-    st.markdown(clickable_img_logo, unsafe_allow_html=True)
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    clickable_img = get_img_with_href(linkpic_code, 'https://github.com/bouhlalyassine/Pics_PDF',
-        170, "blank")
-    st.markdown(clickable_img, unsafe_allow_html=True)
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
     uploaded_file = st.file_uploader("📌 Upload PDF", type=["pdf"], key="fup1", label_visibility="visible")
 
 
@@ -112,9 +97,3 @@ else:
         loop=True,
         quality="high",
         height=150)
-
-    esp_1, col_vid_tuto, esp_2 = st.columns([space, tuto_space, space], gap="small")
-    with col_vid_tuto :
-        with open(tuto_extr_img, "rb") as tuto_file:
-            tuto_extr_img_byte = tuto_file.read()
-        st.video(tuto_extr_img_byte)
